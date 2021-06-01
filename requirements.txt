@@ -1,0 +1,2 @@
+colorama==0.4.4
+pyCLI==2.0.3
