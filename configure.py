@@ -1,20 +1,10 @@
 import os
-from traceback import print_tb
+from conf import GET_ENV
 
 # enviroment variable dictionary
 ENV_VAR = {}
 
-# opens the file to get the content
-# parses each line and adds it to the dictionary
-with open("conf/env.conf", 'r') as config_file:
-    contents = config_file.readlines()
-
-    for variables in contents:
-        collection = variables.split('=')
-        ENV_VAR[collection[0]] = collection[1]
-
 ENV_VAR['PATH'] = os.getcwd()
-
 
 # writing the new evironment varible to the file
 with open("conf/env.conf", 'w+') as config_file:
