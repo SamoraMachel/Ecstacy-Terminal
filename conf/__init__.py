@@ -1,5 +1,3 @@
-from click import command, prompt
-import conf.promptStyle
 
 # fetches all the environment files
 def GET_ENV():

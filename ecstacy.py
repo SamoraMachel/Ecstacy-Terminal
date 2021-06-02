@@ -38,12 +38,13 @@ elif platform == "linux" or platform == "linux2":
 # terminalObject = Terminal()
 
 print(Style.RESET_ALL, Fore.RESET)
-while(command != "exit") :
-    # first we have to parse the commands given
-    # in order to identify the parent command
+while(command != "exit") :    
+    # first we separate each item typed into the
+    # terminal and feed the list to our program
+    parsed_command = command.split(" ")
 
-    parsedCommand = command.split(" ")
-    execute(parsedCommand)
+    execute(parsed_command)
+    print()
     prompt = shell_prompt
     command  = str(input(prompt))
     print(Style.RESET_ALL, Fore.RESET)
