@@ -9,12 +9,13 @@ github: https://github.com/SamoraMachel
 
 from configure import ENV_VAR
 from colorama import Fore, Back, Style
-import os
+import os, sys
 import sys
 import logging
 
 from conf import promptStyle as shellprompt
 from conf import GET_ENV
+from lib.application.executor import execute
 
 from lib.application.executor import execute
 
@@ -42,8 +43,7 @@ while(command != "exit") :
     # in order to identify the parent command
 
     parsedCommand = command.split(" ")
-    # we have to update the path of the prompt each time 
-    # a command is executed
+    execute(parsedCommand)
     prompt = shell_prompt
     command  = str(input(prompt))
     print(Style.RESET_ALL, Fore.RESET)

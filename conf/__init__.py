@@ -29,7 +29,7 @@ def GET_COMMANDS():
     with open('conf/map.conf', 'r') as commands:
         contents = commands.readlines()
 
-        for command_map in commands:
+        for command_map in contents:
             command_list = command_map.split('\t\t')
             COMMANDS[command_list[0]] = command_list[1]
 

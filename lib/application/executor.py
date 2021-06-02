@@ -16,9 +16,8 @@ from lib.application.exceptions import EcstacyException
 
 COMMANDS = GET_COMMANDS()
 
-def execute(**args):
-    command_file = COMMANDS.get(args[0], False);
+def execute(parsed_command):
+    command_file = COMMANDS.get(parsed_command[0], False);
     if command_file == False:
-        raise EcstacyException().InvalidCommand(args[0])
-
+        return EcstacyException().InvalidCommand(parsed_command[0])
 

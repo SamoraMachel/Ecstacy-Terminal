@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 
-class EcstacyException(Exception):
+class EcstacyException(BaseException):
 
     # invoked when a certain command doesn't
     # contain a certain attribute
