@@ -5,6 +5,7 @@ from conf import GET_ENV
 ENV_VAR = {}
 
 ENV_VAR['PATH'] = os.getcwd()
+ENV_VAR['SHELL_MODE'] = False
 
 # writing the new evironment varible to the file
 with open("conf/env.conf", 'w+') as config_file:
