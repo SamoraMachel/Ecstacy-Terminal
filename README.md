@@ -1,3 +1,5 @@
+# STILL IN DEVELOPMENT
+
 ## Ecstacy Terminal
 
 This is an Command line(Terminal) like application which builds on top of the current terminal installed in the system but bring more features with it
