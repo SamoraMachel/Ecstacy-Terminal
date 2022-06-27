@@ -1,4 +1,4 @@
-# STILL IN DEVELOPMENT
+# STOPPED DEVELOPMENT
 
 ## Ecstacy Terminal
 
